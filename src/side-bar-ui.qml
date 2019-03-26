@@ -3,6 +3,11 @@ import QtQuick.Controls 2.1
 import QtQuick.Layouts 1.3
 
 Rectangle {
+    /*SIGNALS*/
+    signal newImage(string index)
+    signal editImage(string index)
+    signal deleteImage(string index)
+
     id: main
     width: 280
     height: 600
@@ -36,16 +41,28 @@ Rectangle {
                             width: rectangle.height - 1
                             height: rectangle.height - 1
                             color: "blue"
-                        }
-
-                        Label {
-                            id: editLabel
-                            font.pixelSize: 14
-                            text: "Edit"
 
                             MouseArea {
                                 anchors.fill: parent
-                                onClicked: console.log("edit")
+                                onClicked: newImage(modelData)
+                            }
+                        }
+                        Button {
+                            id: editBtn
+                            text: "Edit"
+                            style: ButtonStyle {
+                                background: Rectangle {
+                                    implicitWidth: 100
+                                    implicitHeight: 25
+                                    border.width: control.activeFocus ? 2 : 1
+                                    border.color: "#888"
+                                    radius: 4
+                                }
+                            }
+
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: editImage(modelData)
                             }
                         }
 
@@ -56,7 +73,7 @@ Rectangle {
 
                             MouseArea {
                                 anchors.fill: parent
-                                onClicked: console.log("delete")
+                                onClicked: deleteImage(modelData)
                             }
                         }
                     }

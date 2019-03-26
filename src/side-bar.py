@@ -1,6 +1,6 @@
 import sys
 
-from PyQt5.QtCore import QUrl
+from PyQt5.QtCore import QUrl, pyqtSlot, pyqtSignal
 from PyQt5.QtQuickWidgets import QQuickWidget
 from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout
 
@@ -22,9 +22,13 @@ class Window(QWidget):
         self.quick.setSource(QUrl().fromLocalFile(self.RIGHT_SIDEBAR_VIEW_PATH))
         self.quick.setResizeMode(QQuickWidget.SizeRootObjectToView)
 
-        self._rootObject = self.quick.rootObject()
+        self._quick = self.quick.rootObject()
 
     def _connect_ui(self):
+        self._quick.newImage.connect(self._newImage)
+        self._quick.editImage.connect(self._editImage)
+        self._quick.deleteImage.connect(self._deleteImage)
+
         self.quick.statusChanged.connect(self.handleStatusChange)
 
     def _init_window(self):
@@ -36,7 +40,20 @@ class Window(QWidget):
         if status == self.quick.Error:
             [print(e.toString()) for e in self.quick.errors()]
 
+    @pyqtSlot(str)
+    def _newImage(self, index):
+        print("newImage({0})".format(int(index)))
 
-app = QApplication(sys.argv)
-window = Window()
-sys.exit(app.exec_())
+    @pyqtSlot(str)
+    def _editImage(self, index):
+        print("edit({0})".format(int(index)))
+
+    @pyqtSlot(str)
+    def _deleteImage(self, index):
+        print("delete({0})".format(int(index)))
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = Window()
+    sys.exit(app.exec_())
