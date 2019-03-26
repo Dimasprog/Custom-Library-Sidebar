@@ -2,7 +2,7 @@ import sys
 
 from PyQt5.QtCore import QUrl
 from PyQt5.QtQuickWidgets import QQuickWidget
-from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QGraphicsView, QGraphicsScene
+from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout
 
 
 class Window(QWidget):
