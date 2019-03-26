@@ -11,7 +11,7 @@ class Window(QWidget):
     def __init__(self):
         QWidget.__init__(self)
         self.move(1000, 90)
-        self.resize(280, 600)
+        self.resize(322, 600)
         self._define_ui()
         self._connect_ui()
         self._init_window()
