@@ -82,3 +82,5 @@ Rectangle {
         }
     }
 }
+
+/*https://stackoverflow.com/questions/24956562/qml-button-toggling*/
