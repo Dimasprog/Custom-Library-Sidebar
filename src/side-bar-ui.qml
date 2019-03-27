@@ -94,6 +94,7 @@ Rectangle {
                         id: editLabel
                         font.pixelSize: 16
                         text: "Edit"
+                        color: "black"
 
                         MouseArea {
                             anchors.fill: parent
@@ -108,6 +109,7 @@ Rectangle {
                         id: deleteLabel
                         font.pixelSize: 16
                         text: "Delete"
+                        color: "black"
 
                         MouseArea {
                             anchors.fill: parent
