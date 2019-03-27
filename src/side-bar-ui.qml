@@ -56,7 +56,15 @@ Rectangle {
             clip: true
             Layout.fillWidth: true
             Layout.fillHeight: true
-            ScrollBar.vertical: ScrollBar {}
+            ScrollBar.vertical: ScrollBar {
+                id: scrollBar
+                contentItem: Rectangle {
+                    implicitWidth: 7
+                    color: "#242368"
+                    opacity: scrollBar.pressed ? 0.6 : 0.2
+                    radius: width / 2
+                }
+            }
 
             delegate: Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
