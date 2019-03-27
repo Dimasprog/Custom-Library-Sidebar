@@ -56,13 +56,12 @@ Rectangle {
             clip: true
             Layout.fillWidth: true
             Layout.fillHeight: true
-            ScrollBar.vertical: ScrollBar {
-
-            }
+            ScrollBar.vertical: ScrollBar {}
 
             delegate: Rectangle {
+                    anchors.horizontalCenter: parent.horizontalCenter
                     id: rectangle
-                    width: 290
+                    width: 280
                     height: 65
                     color: "#66c9ff"
                     border.color: "blue"
