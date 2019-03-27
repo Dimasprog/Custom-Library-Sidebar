@@ -86,6 +86,7 @@ Rectangle {
                             onClicked: newImage(modelData)
                             onPressed: parent.color = "white"
                             onReleased: parent.color = "blue"
+                            cursorShape: Qt.PointingHandCursor
                         }
                     }
 
@@ -99,6 +100,7 @@ Rectangle {
                             onClicked: main.editImage(modelData)
                             onPressed: parent.color =  "white"
                             onReleased: parent.color = "black"
+                            cursorShape: Qt.PointingHandCursor
                         }
                     }
 
@@ -112,6 +114,7 @@ Rectangle {
                             onClicked: main.deleteImage(modelData)
                             onPressed: parent.color =  "white"
                             onReleased: parent.color = "black"
+                            cursorShape: Qt.PointingHandCursor
                         }
                     }
                 }
