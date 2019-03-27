@@ -72,7 +72,7 @@ Rectangle {
                         border.color: "blue"
                         width: rectangle.height
                         height: rectangle.height
-                        color: "blue"
+                        color: "white"
 
                         Image {
                             anchors.horizontalCenter: parent.horizontalCenter
@@ -83,8 +83,8 @@ Rectangle {
                         MouseArea {
                             anchors.fill: parent
                             onClicked: newImage(modelData)
-                            onPressed: parent.color = "white"
-                            onReleased: parent.color = "blue"
+                            onPressed: parent.color = "blue"
+                            onReleased: parent.color = "white"
                             cursorShape: Qt.PointingHandCursor
                         }
                     }
