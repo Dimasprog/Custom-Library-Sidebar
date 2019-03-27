@@ -19,6 +19,7 @@ class Window(QWidget):
 
     def _define_ui(self):
         self.quick = QQuickWidget()
+        self.quick.statusChanged.connect(self.handleStatusChange)
         self.quick.setSource(QUrl().fromLocalFile(self.RIGHT_SIDEBAR_VIEW_PATH))
         self.quick.setResizeMode(QQuickWidget.SizeRootObjectToView)
 
@@ -28,8 +29,6 @@ class Window(QWidget):
         self._quick.newImage.connect(self._newImage)
         self._quick.editImage.connect(self._editImage)
         self._quick.deleteImage.connect(self._deleteImage)
-
-        self.quick.statusChanged.connect(self.handleStatusChange)
 
     def _init_window(self):
         box_layout = QHBoxLayout()
@@ -42,15 +41,15 @@ class Window(QWidget):
 
     @pyqtSlot(str)
     def _newImage(self, index):
-        print("newImage({0})".format(int(index)))
+        print("newImage({0})".format(int(index) + 1))
 
     @pyqtSlot(str)
     def _editImage(self, index):
-        print("edit({0})".format(int(index)))
+        print("edit({0})".format(int(index) + 1))
 
     @pyqtSlot(str)
     def _deleteImage(self, index):
-        print("delete({0})".format(int(index)))
+        print("delete({0})".format(int(index) + 1))
 
 
 if __name__ == '__main__':
