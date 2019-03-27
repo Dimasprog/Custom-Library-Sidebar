@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout
 
 
 class Window(QWidget):
+    # RIGHT_SIDEBAR_VIEW_PATH = "custom-side-bar.qml"
     RIGHT_SIDEBAR_VIEW_PATH = "side-bar-ui.qml"
 
     def __init__(self):
@@ -13,7 +14,7 @@ class Window(QWidget):
         self.move(1000, 90)
         self.resize(322, 600)
         self._define_ui()
-        self._connect_ui()
+        # self._connect_ui()
         self._init_window()
         self.show()
 
