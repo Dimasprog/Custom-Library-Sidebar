@@ -10,6 +10,7 @@ Rectangle {
 
     /*PROPERTIES*/
     property int teethModelsCount: 12
+    property int paddingSizeBetweenDelegates: 10
 
     /*SIGNALS*/
     signal newImage(string index)
@@ -49,7 +50,7 @@ Rectangle {
 
         ListView {
             id: listView
-            spacing: 5
+            spacing: paddingSizeBetweenDelegates
             flickableDirection: Flickable.VerticalFlick
             boundsBehavior: Flickable.StopAtBounds
             model: teethModelsCount
@@ -59,7 +60,7 @@ Rectangle {
             ScrollBar.vertical: ScrollBar {
                 id: scrollBar
                 contentItem: Rectangle {
-                    implicitWidth: 7
+                    implicitWidth: paddingSizeBetweenDelegates - 3
                     color: "#242368"
                     opacity: scrollBar.pressed ? 0.6 : 0.2
                     radius: width / 2
@@ -69,13 +70,14 @@ Rectangle {
             delegate: Rectangle {
                 anchors.horizontalCenter: parent.horizontalCenter
                 id: rectangle
-                width: 280
+                width: 300 - paddingSizeBetweenDelegates * 2
                 height: 65
                 color: "#66c9ff"
                 border.color: "blue"
 
                 RowLayout{
                     spacing: 40
+
                     Rectangle {
                         border.color: "blue"
                         width: rectangle.height
