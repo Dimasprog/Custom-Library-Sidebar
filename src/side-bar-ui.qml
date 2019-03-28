@@ -67,12 +67,12 @@ Rectangle {
             }
 
             delegate: Rectangle {
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    id: rectangle
-                    width: 280
-                    height: 65
-                    color: "#66c9ff"
-                    border.color: "blue"
+                anchors.horizontalCenter: parent.horizontalCenter
+                id: rectangle
+                width: 280
+                height: 65
+                color: "#66c9ff"
+                border.color: "blue"
 
                 RowLayout{
                     spacing: 40
