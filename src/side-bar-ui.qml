@@ -20,28 +20,28 @@ Rectangle {
     /*FUNCTIONS*/
     function imageSelection(index) {
         if (teethModelsCount == 8) {
-            if (index == 0) { return "img/11.png"}
-            if (index == 1) { return "img/12.png"}
-            if (index == 2) { return "img/13.png"}
-            if (index == 3) { return "img/14.png"}
-            if (index == 4) { return "img/31.png"}
-            if (index == 5) { return "img/32.png"}
-            if (index == 6) { return "img/33.png"}
-            if (index == 7) { return "img/34.png"}
+            if (index == 0) { return "img/11.png" }
+            if (index == 1) { return "img/12.png" }
+            if (index == 2) { return "img/13.png" }
+            if (index == 3) { return "img/14.png" }
+            if (index == 4) { return "img/31.png" }
+            if (index == 5) { return "img/32.png" }
+            if (index == 6) { return "img/33.png" }
+            if (index == 7) { return "img/34.png" }
         }
         if (teethModelsCount == 12) {
-            if (index == 0) { return "img/11.png"}
-            if (index == 1) { return "img/12.png"}
-            if (index == 2) { return "img/13.png"}
-            if (index == 3) { return "img/14.png"}
-            if (index == 4) { return "img/15.png"}
-            if (index == 5) { return "img/16.png"}
-            if (index == 6) { return "img/31.png"}
-            if (index == 7) { return "img/32.png"}
-            if (index == 8) { return "img/33.png"}
-            if (index == 9) { return "img/34.png"}
-            if (index == 10) { return "img/35.png"}
-            if (index == 11) { return "img/36.png"}
+            if (index == 0) { return "img/11.png" }
+            if (index == 1) { return "img/12.png" }
+            if (index == 2) { return "img/13.png" }
+            if (index == 3) { return "img/14.png" }
+            if (index == 4) { return "img/15.png" }
+            if (index == 5) { return "img/16.png" }
+            if (index == 6) { return "img/31.png" }
+            if (index == 7) { return "img/32.png" }
+            if (index == 8) { return "img/33.png" }
+            if (index == 9) { return "img/34.png" }
+            if (index == 10) { return "img/35.png" }
+            if (index == 11) { return "img/36.png" }
         }
     }
 
